@@ -4,9 +4,10 @@ module.exports = {
       "Users",
       [
         {
-          Name: "Burhan",
+          name: "Burhan",
           email: "burhan@gmail.com",
           password: "123",
+          gender: "male",
           createdAt: new Date(),
           updatedAt: new Date(),
         },

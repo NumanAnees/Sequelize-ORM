@@ -4,8 +4,8 @@ module.exports = {
       "Tasks",
       [
         {
-          title: "Build new App",
-          userId: 1,
+          title: "New App",
+          userId: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
         },

@@ -42,3 +42,20 @@ exports.getOne = async (req, res) => {
     console.log(err);
   }
 };
+//many to one
+exports.getTasks = async (req, res) => {
+  const { id } = req.body;
+  try {
+    const allData = await Task.findAll({
+      include: [
+        {
+          model: User,
+        },
+      ],
+      where: { userId: id },
+    });
+    res.status(200).json({ data: allData });
+  } catch (err) {
+    console.log(err);
+  }
+};

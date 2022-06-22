@@ -1,16 +1,16 @@
 {
   "development": {
-    "database": "sequelize_dev",
+    "database": "paranoid_dev2",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "database": "sequelize_test",
+    "database": "paranoid_test2",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "sequelize_production",
+    "database": "paranoid_prod2",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }

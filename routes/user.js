@@ -3,7 +3,13 @@ const router = express.Router();
 
 // import middlewares
 // import controllers
-const { getAll, getById, getOne, getTasks } = require("../controllers/user");
+const {
+  getAll,
+  getById,
+  getOne,
+  getTasks,
+  ManyToMany,
+} = require("../controllers/user");
 
 // routes
 router.get("/getAll", getAll);
@@ -12,5 +18,7 @@ router.post("/getOne", getOne);
 
 //many to one
 router.post("/getTasks", getTasks);
+//many to many
+router.get("/ManyToMany", ManyToMany);
 
 module.exports = router;

@@ -1,4 +1,4 @@
-const { User, Task, Project } = require("../models");
+const { User, Task, Project, Group, Employee } = require("../models");
 
 exports.getAll = async (req, res) => {
   try {
@@ -55,6 +55,23 @@ exports.getTasks = async (req, res) => {
       where: { userId: id },
     });
     res.status(200).json({ data: allData });
+  } catch (err) {
+    console.log(err);
+  }
+};
+//many to many
+exports.ManyToMany = async (req, res) => {
+  try {
+    const data = await Employee.findAll({
+      include: [
+        {
+          model: Group,
+          as: "groups",
+          attributes: ["id", "name"],
+        },
+      ],
+    });
+    res.status(200).json({ data: data });
   } catch (err) {
     console.log(err);
   }
